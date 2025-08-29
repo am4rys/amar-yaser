@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <h1>
+    Hello, World!
+  </h1>
+</body>
+</html>
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <h1>
+    Hello, World!
+  </h1>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طالب - منصة تبادل المهارات الطلابية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2ecc71;
+            --accent: #e74c3c;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --text: #333;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            color: var(--primary);
+            font-size: 28px;
+            margin-left: 10px;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        .logo-text span {
+            color: var(--primary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+            background: rgba(52, 152, 219, 0.1);
+        }
+        
+        .auth-buttons {
+            display: flex;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            margin-right: 10px;
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-content {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        /* Features Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--dark);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        .features {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            box-shadow: var(--shadow);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 50px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .steps {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        
+        .step {
+            text-align: center;
+            width: 250px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        
+        /* Demo Section */
+        .demo {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .demo-container {
+            background: var(--light);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .skill-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+        
+        .skill-pill {
+            padding: 10px 20px;
+            background: #e0e0e0;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .skill-pill:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .skill-pill.selected {
+            background: var(--secondary);
+            color: white;
+        }
+        
+        .results-container {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            display: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .match-card {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .match-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-left: 15px;
+            font-size: 20px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, #2c3e50 100%);
+            color: white;
+        }
+        
+        .testimonial-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-weight: bold;
+            margin-left: 15px;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            text-align: center;
+            background: white;
+        }
+        
+        .cta h2 {
+            margin-bottom: 30px;
+            color: var(--dark);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+        
+        .footer-section p {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: #ddd;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .footer-section a:hover {
+            color: var(--secondary);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-content {
+                margin-bottom: 40px;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            nav ul {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            .auth-buttons {
+                margin-top: 15px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .steps {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .testimonial-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="logo-text">طالب<span>Hub</span></div>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">الميزات</a></li>
+                        <li><a href="#">كيف تعمل</a></li>
+                        <li><a href="#">المجتمع</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <a href="#" class="btn btn-outline">تسجيل الدخول</a>
+                    <a href="#" class="btn btn-primary">انضم إلينا</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>منصة تبادل المهارات بين الطلاب</h1>
+                <p>طالب هاب هي منصة مبتكرة تتيح للطلاب تبادل المعرفة والمهارات في بيئة تعليمية collaborative. سواء كنت تريد تعلم لغة جديدة، برمجة، تصميم، أو أي مهارة أخرى، ستجد من يساعدك!</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">ابدأ الآن</a>
+                    <a href="#" class="btn btn-outline">شاهد الفيديو</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/500x400/f5f7fa/2c3e50?text=طالب+Hub" alt="طالب Hub" style="max-width: 100%; border-radius: 10px; box-shadow: var(--shadow);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">ميزات المنصة</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>تبادل المهارات</h3>
+                    <p>شارك مهاراتك مع الآخرين وتعلم مهارات جديدة من زملائك الطلاب</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>مجتمع طلابي</h3>
+                    <p>انضم إلى مجتمع طلابي نشط يهدف إلى التطوير والتعلم المشترك</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>شهادات مشاركة</h3>
+                    <p>احصل على شهادات مشاركة وتقييمات تعزز سيرتك الذاتية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">كيف تعمل المنصة</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>أنشئ حسابك</h3>
+                    <p>سجل في المنصة وحدد مهاراتك والمهارات التي تريد تعلمها</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>ابحث عن شريك</h3>
+                    <p>ابحث عن الطلاب المناسبين لتبادل المعرفة معهم</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>ابدأ التبادل</h3>
+                    <p>اتفق على الوقت والطريقة وابدأ رحلة التبادل المعرفي</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo -->
+    <section class="demo">
+        <div class="container">
+            <h2 class="section-title">جرب المنصة الآن</h2>
+            <div class="demo-container">
+                <p style="text-align: center; margin-bottom: 30px;">اختر المهارات التي تريد تعلمها وسنجد لك الطلاب المناسبين لمساعدتك</p>
+                
+                <div class="skill-selector">
+                    <div class="skill-pill" onclick="toggleSkill(this)">برمجة</div>
+                    <div class="skill-pill" onclick="toggleSkill(this)">تصميم جرافيك</div>
+                    <div class="skill-pill" onclick="toggleSkill(this)">لغة إنجليزية</div>
+                    <div class="skill-pill" onclick="toggleSkill(this)">إدارة وقت</div>
+                    <div class="skill-pill" onclick="toggleSkill(this)">خطابة وعرض تقديمي</div>
+                    <div class="skill-pill" onclick="toggleSkill(this)">تحليل بيانات</div>
+                </div>
+                
+                <div style="text-align: center;">
+                    <button class="btn btn-primary" onclick="findMatches()">ابحث عن أشخاص</button>
+                </div>
+                
+                <div class="results-container" id="results">
+                    <h3 style="margin-bottom: 20px; text-align: center;">الطلاب المناسبون لمساعدتك</h3>
+                    
+                    <div class="match-card">
+                        <div class="match-info">
+                            <h4>            </h4>
+                            <p>                  </p>
+                            <p>                              </p>
+                        </div>
+                        <div class="match-avatar">أ</div>
+                    </div>
+                    
+                    <div class="match-card">
+                        <div class="match-info">
+                            <h4>                 </h4>
+                            <p>                            </p>
+                            <p>                         </p>
+                        </div>
+                        <div class="match-avatar">س</div>
+                    </div>
+                    
+                    <div class="match-card">
+                        <div class="match-info">
+                            <h4>               </h4>
+                            <p>                       </p>
+                            <p>                                </p>
+                        </div>
+                        <div class="match-avatar">خ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+    <div class="container">
+        <h2 class="section-title">آراء الطلاب</h2>
+        <div class="testimonial-cards">
+            <!-- الرأي الأول - فارغ -->
+            <div class="testimonial">
+                <p class="testimonial-text">"هنا سيتم كتابة رأي أول طالب يستخدم المنصة..."</p>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>اسم الطالب الأول</h4>
+                        <p>التخصص الجامعي</p>
+                    </div>
+                    <div class="author-avatar">?</div>
+                </div>
+            </div>
+            
+            <!-- الرأي الثاني - فارغ -->
+            <div class="testimonial">
+                <p class="testimonial-text">"هنا سيتم كتابة رأي ثاني طالب يستخدم المنصة..."</p>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>اسم الطالب الثاني</h4>
+                        <p>التخصص الجامعي</p>
+                    </div>
+                    <div class="author-avatar">?</div>
+                </div>
+            </div>
+            
+            <!-- الرأي الثالث - فارغ -->
+            <div class="testimonial">
+                <p class="testimonial-text">"هنا سيتم كتابة رأي ثالث طالب يستخدم المنصة..."</p>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>اسم الطالب الثالث</h4>
+                        <p>التخصص الجامعي</p>
+                    </div>
+                    <div class="author-avatar">?</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>انضم إلى مجتمعنا المتنامي</h2>
+            <p>سجل اليوم وابدأ رحلة تبادل المعرفة والمهارات</p>
+            <a href="#" class="btn btn-primary">سجل مجاناً</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>am.4r.ys7@gmail.com</h3>
+                    <p>منصة طلابية تهدف إلى تمكين الطلاب من تبادل المعرفة والمهارات بين بعضهم البعض في بيئة جامعية.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <a href="#">الرئيسية</a>
+                    <a href="#">عن المنصة</a>
+                    <a href="#">الميزات</a>
+                    <a href="#">كيف تعمل</a>
+                    <a href="#">اتصل بنا</a>
+                </div>
+                <div class="footer-section">
+                    <h3>اتصل بنا</h3>
+                    <p><i class="fas fa-envelope"></i> am.4r.ys7@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +967 771787896</p>
+                    <p><i class="fas fa-map-marker-alt"></i> صنعاء،اليمن</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; 2025 - مصمم المشروع ، am.4r.ys7@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to toggle skill selection
+        function toggleSkill(element) {
+            element.classList.toggle('selected');
+        }
+        
+        // Function to find matches
+        function findMatches() {
+            document.getElementById('results').style.display = 'block';
+            
+            // Scroll to results
+            document.getElementById('results').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+        // Simple animation for feature cards on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const featureCards = document.querySelectorAll('.feature-card');
+            
+            featureCards.forEach((card, index) => {
+                // Add delay based on index for staggered animation
+                card.style.transitionDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html>
